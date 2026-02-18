@@ -1,0 +1,399 @@
+/* =========================================================
+   Optional LibGuides-only header/breadcrumb hides
+   (Leave commented for GitHub. Uncomment for LibGuides.)
+========================================================= */
+/*
+#s-lg-guide-header-info { display: none !important; }
+#s-lg-guide-tabs-title-bar { display: none !important; }
+#s-lg-bc,
+#s-lg-guide-breadcrumb,
+#s-lg-guide-breadcrumbs,
+.s-lg-breadcrumb,
+.breadcrumb,
+nav[aria-label="breadcrumb"] { display: none !important; }
+*/
+
+.lib-directory-scope {
+  --mu-black: #000;
+  --mu-gold: #FFB81C;
+  --ink: #111;
+  --muted: #555;
+  --card: #fff;
+  --card-shadow: 0 6px 28px rgba(0,0,0,.08);
+  --border: #eee;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+}
+
+/* === LibGuides hardening patch (scoped) === */
+.lib-directory-scope,
+.lib-directory-scope .container,
+.lib-directory-scope .search-panel {
+  overflow: visible !important;
+  max-width: 100% !important;
+}
+
+/* Flexbox overflow fix */
+.lib-directory-scope .search-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  align-items: stretch;
+  min-width: 0;
+}
+
+/* Inputs/selects */
+.lib-directory-scope .search-controls input,
+.lib-directory-scope .search-controls select {
+  flex: 1 1 320px;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  height: 46px;
+  line-height: 1.2;
+  padding: .7rem .9rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Buttons */
+.lib-directory-scope .search-controls button {
+  flex: 0 0 auto;
+  height: 46px;
+  white-space: nowrap;
+}
+
+.lib-directory-scope input,
+.lib-directory-scope select,
+.lib-directory-scope button {
+  font: inherit;
+}
+
+/* Ultra-narrow columns */
+@media (max-width: 480px) {
+  .lib-directory-scope .search-controls input,
+  .lib-directory-scope .search-controls select {
+    flex-basis: 100%;
+  }
+}
+
+.lib-directory-scope *,
+.lib-directory-scope *::before,
+.lib-directory-scope *::after {
+  box-sizing: border-box;
+}
+
+.lib-directory-scope a {
+  color: #1a5fd2;
+  text-decoration: none;
+}
+
+.lib-directory-scope a:hover {
+  text-decoration: underline;
+}
+
+.lib-directory-scope .container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.lib-directory-scope h3 {
+  text-align: center;
+  font-size: 1.9rem;
+  margin: .25rem 0 1.1rem;
+}
+
+/* Toggle buttons */
+.toggle-group {
+  text-align: center;
+  margin: 0 0 1.75rem;
+}
+
+.toggle-btn {
+  display: inline-block;
+  margin: 0 .4rem;
+  padding: .7rem 1.6rem;
+  border: 3px solid var(--mu-gold);
+  border-radius: 10px;
+  background: #fff;
+  font-weight: 800;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+.toggle-btn.active,
+.toggle-btn:hover {
+  background: var(--mu-gold);
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+}
+
+/* Search Panel */
+.search-panel {
+  background: #f9f9f9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 0 0 2rem;
+}
+
+.search-panel h4 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.search-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-controls input,
+.search-controls select {
+  flex: 1;
+  min-width: 200px;
+  padding: .7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.search-controls button {
+  padding: .7rem 1.5rem;
+  background: var(--mu-gold);
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow .2s ease;
+}
+
+.search-controls button:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+}
+
+/* MU-themed glow animation */
+@keyframes mu-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--mu-gold),
+                0 0 10px var(--mu-gold),
+                0 0 15px var(--mu-gold),
+                0 0 20px var(--mu-gold);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--mu-gold),
+                0 0 20px var(--mu-gold),
+                0 0 30px var(--mu-gold),
+                0 0 40px var(--mu-gold);
+  }
+}
+
+.search-result.active {
+  animation: mu-glow 2s ease-in-out infinite;
+  border: 2px solid var(--mu-gold);
+}
+
+.search-result {
+  display: none;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.search-result.active {
+  display: block;
+}
+
+.result-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.result-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.result-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-info h5 {
+  margin: 0 0 .5rem;
+  font-size: 1.5rem;
+}
+
+.result-info p {
+  margin: .25rem 0;
+}
+
+.result-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.result-actions a {
+  padding: .6rem 1.2rem;
+  background: var(--mu-gold);
+  color: var(--ink);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.result-actions a:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+}
+
+/* Grid + cards - Responsive 4-column layout */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem 1.75rem;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  position: relative;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 420px;
+  margin: 0 auto 1rem;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: .4rem 0 .35rem;
+}
+
+.title {
+  font-size: 1.05rem;
+  margin: .15rem 0;
+}
+
+.rank {
+  font-style: italic;
+  color: var(--ink);
+  margin: .15rem 0 .4rem;
+}
+
+.line {
+  margin: .25rem 0;
+}
+
+.subjects {
+  margin: .9rem auto .6rem;
+  max-width: 32ch;
+}
+
+.subjects strong { display: block; }
+
+.view-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .85rem 2.25rem;
+  border: 6px solid var(--mu-gold);
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: .02em;
+  transition: background .15s ease, box-shadow .15s ease, transform .03s ease;
+  text-decoration: none;
+}
+
+.view-btn:hover,
+.view-btn:focus-visible {
+  background: var(--mu-gold);
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  outline: none;
+}
+
+/* Subjects only for subject librarians */
+.card:not(.subject-librarian) .subjects {
+  display: none;
+}
+
+/* View button: hidden by default */
+.card .view-btn {
+  display: none;
+}
+
+/* View button: show for subject librarians */
+.card.subject-librarian .view-btn {
+  display: inline-block;
+}
+
+/* View button: also show for manually marked profile staff */
+.card.has-profile .view-btn {
+  display: inline-block;
+}
+
+/* hide helper */
+.is-hidden {
+  display: none !important;
+}
+
+/* Force readable size for job titles */
+#mu-lib-directory-cards .card .title,
+.lib-directory-scope #mu-lib-directory-cards .card .title {
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  color: var(--ink) !important;
+  margin: .25rem 0 .4rem !important;
+}
+
+#mu-lib-directory-cards,
+#mu-lib-directory-cards * {
+  font-size: inherit;
+}

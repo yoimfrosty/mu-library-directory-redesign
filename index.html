@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Library Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="lib-directory-scope" id="mu-lib-directory-cards">
+  <div class="container">
+    <h3 style="text-align: center;"><span style="font-size:36px;">Library Directory</span></h3>
+
+    <!-- Toggle buttons -->
+    <div aria-label="Filter staff view" class="toggle-group">
+      <button class="toggle-btn active" id="btn-all" type="button">All Staff</button>
+      <button class="toggle-btn" id="btn-subjects" type="button">Subject Librarians</button>
+    </div>
+
+    <!-- Search Panel -->
+    <div class="search-panel">
+      <h4>Find Your Subject Librarian</h4>
+
+      <div class="search-controls">
+        <input
+          aria-label="Search by department or program"
+          id="search-input"
+          placeholder="Type your department or program..."
+          type="text"
+        />
+
+        <select aria-label="Select department" id="department-select">
+          <option value="">-- Select a Department --</option>
+          <option value="African-American Studies">African-American Studies</option>
+          <option value="Applied Engineering, Safety &amp; Technology">Applied Engineering, Safety &amp; Technology</option>
+          <option value="Art &amp; Design">Art &amp; Design</option>
+          <option value="Biology">Biology</option>
+          <option value="Business Administration">Business Administration</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Communication &amp; Theatre">Communication &amp; Theatre</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Criminology, Sociology &amp; Anthropology">Criminology, Sociology &amp; Anthropology</option>
+          <option value="Earth Sciences">Earth Sciences</option>
+          <option value="Economics">Economics</option>
+          <option value="Educational Foundations">Educational Foundations</option>
+          <option value="Early, Middle &amp; Elementary Education">Early, Middle &amp; Elementary Education</option>
+          <option value="Emergency Management">Emergency Management</option>
+          <option value="English &amp; World Languages">English &amp; World Languages</option>
+          <option value="Entrepreneurship">Entrepreneurship</option>
+          <option value="Geography">Geography</option>
+          <option value="Government, Policy &amp; Law">Government, Policy &amp; Law</option>
+          <option value="History">History</option>
+          <option value="Integrated Studies">Integrated Studies</option>
+          <option value="International Studies">International Studies</option>
+          <option value="Latino/a Studies">Latino/a Studies</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Music">Music</option>
+          <option value="Nursing">Nursing</option>
+          <option value="Philosophy">Philosophy</option>
+          <option value="Physics">Physics</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Social Work">Social Work</option>
+          <option value="Special Education">Special Education</option>
+          <option value="Wellness">Wellness</option>
+          <option value="Women's, Gender &amp; Sexuality Studies">Women&#39;s, Gender &amp; Sexuality Studies</option>
+        </select>
+
+        <button id="clear-btn" type="button">Clear</button>
+      </div>
+
+      <div class="search-result" id="search-result">
+        <div class="result-content">
+          <div class="result-photo">
+            <img alt="" id="result-photo" loading="lazy" src="/placeholder.svg" />
+          </div>
+
+          <div class="result-info">
+            <h5 id="result-name">&nbsp;</h5>
+            <p id="result-title">&nbsp;</p>
+            <p id="result-department">&nbsp;</p>
+
+            <div class="result-actions">
+              <a href="" id="result-email">Email</a>
+              <a href="" id="result-schedule">Schedule Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section aria-label="Directory results" class="grid">
+      <!-- ========== SUBJECT LIBRARIANS ========== -->
+
+      <!-- Greg Szczyrbak -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head shot of Greg Szczyrbak" loading="lazy" src="https://libapps.s3.amazonaws.com/customers/3087/images/GregHeadshot2023.jpg" />
+        </div>
+        <div class="name">Greg Szczyrbak</div>
+        <div class="title">Information Literacy Librarian</div>
+        <div class="rank">Associate Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7120</div>
+        <div class="line"><strong>Office:</strong> McNairy 206</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:greg.szczyrbak@millersville.edu">greg.szczyrbak@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Emergency Management, Psychology</span></div>
+        <a aria-label="View Greg Szczyrbak profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=58fa29f4-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Scott Anderson -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head shot of Scott Anderson" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/s_anderson_cropped_2.jpg" />
+        </div>
+        <div class="name">Scott Anderson</div>
+        <div class="title">Systems Librarian</div>
+        <div class="rank">Associate Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7030</div>
+        <div class="line"><strong>Office:</strong> McNairy LL102A</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:scott.anderson@millersville.edu">scott.anderson@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Business Administration, Computer Science, Economics, Entrepreneurship, Mathematics</span></div>
+        <a aria-label="View Scott Anderson profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=59103153-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Kim Auger -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head shot of Kim Auger" loading="lazy" src="https://libapps.s3.amazonaws.com/accounts/146774/images/Kim_on_zoom-square.jpg" />
+        </div>
+        <div class="name">Kim Auger</div>
+        <div class="title">User Experience Librarian</div>
+        <div class="rank">Assistant Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7099</div>
+        <div class="line"><strong>Office:</strong> McNairy 201</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:kimberly.auger@millersville.edu">kimberly.auger@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Art &amp; Design, Communication &amp; Theatre, Integrated Studies</span></div>
+        <a aria-label="View Kim Auger profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=5b41860f-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Melissa Gold -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head shot of Melissa Gold (Donnelly)" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/m_gold_Cropped.jpg" />
+        </div>
+        <div class="name">Melissa Gold (Donnelly)</div>
+        <div class="title">Science Librarian</div>
+        <div class="rank">Associate Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7124</div>
+        <div class="line"><strong>Office:</strong> McNairy 205</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:melissa.gold@millersville.edu">melissa.gold@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Biology, Chemistry, Earth Sciences, Nursing, Physics</span></div>
+        <a aria-label="View Melissa Gold (Donnelly) profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=59104b93-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Krista Higham -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head Shot of Krista Higham" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/krista_higham.jpg" />
+        </div>
+        <div class="name">Krista Higham</div>
+        <div class="title">Access Services &amp; Scholarly Communication Librarian</div>
+        <div class="rank">Assistant Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-5511</div>
+        <div class="line"><strong>Office:</strong> McNairy LL102B</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:krista.higham@millersville.edu">krista.higham@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Applied Engineering, Safety &amp; Technology; Copyright; Geography</span></div>
+        <a aria-label="View Krista Higham profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=59103678-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Stephanie Thompson -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head Shot of Stephanie Thompson" loading="lazy" src="https://libapps.s3.amazonaws.com/customers/3087/images/Penucci.jpg" />
+        </div>
+        <div class="name">Stephanie Thompson</div>
+        <div class="title">Education Librarian</div>
+        <div class="rank">Assistant Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7122</div>
+        <div class="line"><strong>Office:</strong> McNairy 304</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:stephanie.thompson@millersville.edu">stephanie.thompson@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Educational Foundations; Early, Middle &amp; Elementary Education; Special Education; Wellness</span></div>
+        <a aria-label="View Stephanie Thompson profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=5a39c432-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Teresa Weisser -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head Shot of Teresa Weisser" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/WeisserT_0.jpg" />
+        </div>
+        <div class="name">Teresa Weisser</div>
+        <div class="title">Cataloging &amp; Metadata Librarian; Government Documents Coordinator</div>
+        <div class="rank">Assistant Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7098</div>
+        <div class="line"><strong>Office:</strong> McNairy LL103C</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:teresa.weisser@millersville.edu">teresa.weisser@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Government, Policy &amp; Law; International Studies</span></div>
+        <a aria-label="View Teresa Weisser profile" class="view-btn" href=" https://library.millersville.edu/prf.php?id=59103b40-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Frank Vitale IV -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head Shot of Frank Vitale IV" loading="lazy" src="https://libapps.s3.amazonaws.com/customers/3087/images/SmallSquareFrank_Vitale_8_Fav.jpg" />
+        </div>
+        <div class="name">Frank Vitale IV</div>
+        <div class="title">Special Collections Librarian &amp; University Archivist</div>
+        <div class="rank">Assistant Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7133</div>
+        <div class="line"><strong>Office:</strong> McNairy 802B</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:frank.vitale@millersville.edu">frank.vitale@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">History; Philosophy</span></div>
+        <a aria-label="View Frank Vitale IV profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=62293bea-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Tatiana Pashkova-Balkenhol -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head Shot of Tatiana Pashkova-Balkenhol" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/t_pb_cropped.jpg" />
+        </div>
+        <div class="name">Tatiana Pashkova-Balkenhol</div>
+        <div class="title">Undergraduate Research &amp; Instruction Librarian</div>
+        <div class="rank">Associate Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-4078</div>
+        <div class="line"><strong>Office:</strong> McNairy 202</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:tatiana.pashkova.balkenhol@millersville.edu">tatiana.pashkova.balkenhol@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Music, Social Work, Office of International Programs &amp; Services</span></div>
+        <a aria-label="View Tatiana Pashkova-Balkenhol profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=598f7dc7-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Michele Santamaria -->
+      <article class="card subject-librarian">
+        <div class="photo">
+          <img alt="Head shot of Michele Santamaria" loading="lazy" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/3087/images/2025Michele_Santamaria.jpg" />
+        </div>
+        <div class="name">Michele Santamaria</div>
+        <div class="title">Student Engagement &amp; Learning Design Librarian</div>
+        <div class="rank">Assistant Professor</div>
+        <div class="line"><strong>Phone:</strong> 717-871-4202</div>
+        <div class="line"><strong>Office:</strong> McNairy 204</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:michele.santamaria@millersville.edu">michele.santamaria@millersville.edu</a></div>
+        <div class="subjects">
+          <strong>Subject area(s):</strong>
+          <span class="wrap">African-American Studies; Criminology, Women&#39;s, Gender &amp; Sexuality Studies; Sociology &amp; Anthropology; English &amp; World Languages; Latino/a Studies</span>
+        </div>
+        <a aria-label="View Michele Santamaria profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=59797d22-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- ========== ALL STAFF (non subject librarians) ========== -->
+
+      <!-- Gemma Bryant -->
+      <article class="card">
+        <div class="photo">
+          <img alt="Head shot of Gemma Bryant" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/gemma.jpeg" />
+        </div>
+        <div class="name">Gemma Bryant</div>
+        <div class="title">Library Cataloging and Metadata Technician</div>
+        <div class="rank">&nbsp;</div>
+        <div class="line"><strong>Phone:</strong> 717-871-5054</div>
+        <div class="line"><strong>Office:</strong> McNairy LL103A</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:gemma.bryant@millersville.edu">gemma.bryant@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Position: Cataloging &amp; Metadata</span></div>
+        <a aria-label="View Gemma Bryant profile" class="view-btn" href="https://library.millersville.edu/c.php?g=1489948&amp;p=11120315&amp;preview=226bd38c2df1a2cc86ebeaa95cb82f15">view more</a>
+      </article>
+
+      <!-- Sally Levit -->
+      <article class="card">
+        <div class="photo">
+          <img alt="Head shot of Sally Levit" loading="lazy" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/3087/images/sally.jpg" />
+        </div>
+        <div class="name">Sally Levit</div>
+        <div class="title">Access Services Library Assistant</div>
+        <div class="rank">&nbsp;</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7109</div>
+        <div class="line"><strong>Office:</strong> McNairy LL114B</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:sally.levit@millersville.edu">sally.levit@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Position: Access Services</span></div>
+        <a aria-label="View Sally Levit profile" class="view-btn" href="https://library.millersville.edu/c.php?g=1489955&amp;p=11120360&amp;preview=e67afcc542e43f72badc16c5f84ba01b">view more</a>
+      </article>
+
+      <!-- William Marshall -->
+      <article class="card">
+        <div class="photo">
+          <img alt="Head shot of William Marshall" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/william.jpg" />
+        </div>
+        <div class="name">William Marshall</div>
+        <div class="title">Acquisitions Technician</div>
+        <div class="rank">&nbsp;</div>
+        <div class="line"><strong>Phone:</strong> 717-871-4803</div>
+        <div class="line"><strong>Office:</strong> McNairy LL103D</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:william.marshall@millersville.edu">william.marshall@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Position: Acquisitions</span></div>
+        <a aria-label="View William Marshall profile" class="view-btn" href="https://library.millersville.edu/c.php?g=1489956&amp;p=11120365&amp;preview=7eb39929553d4de84e2d9c21f468bacd">view more</a>
+      </article>
+
+      <!-- Ramie Millar -->
+      <article class="card has-profile">
+        <div class="photo">
+          <img alt="Head shot of Ramie Millar" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/ramie_millar.jpg" />
+        </div>
+        <div class="name">Ramie Millar</div>
+        <div class="title">Library Technologist &ndash; Access Services</div>
+        <div class="rank">&nbsp;</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7117</div>
+        <div class="line"><strong>Office:</strong> McNairy 110B</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:ramie.millar@millersville.edu">ramie.millar@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Position: Technology Support (Access Services)</span></div>
+        <a aria-label="View Ramie Millar profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=5985da7a-7cdb-11ed-9922-0ad758b798c3">view more</a>
+      </article>
+
+      <!-- Andie Petrillo -->
+      <article class="card has-profile">
+        <div class="photo">
+          <img alt="Head shot of Andie Petrillo" loading="lazy" src="https://libapps.s3.amazonaws.com/customers/3087/images/AndiHeadshot.jpg" />
+        </div>
+        <div class="name">Andie Petrillo</div>
+        <div class="title">Administrative Assistant</div>
+        <div class="rank">&nbsp;</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7135</div>
+        <div class="line"><strong>Office:</strong> McNairy 207</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:andie.petrillo@millersville.edu">andie.petrillo@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Position: Administrative Support</span></div>
+        <a aria-label="View Andie Petrillo profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=db130028-74f3-11ee-8db8-127d3674933b">view more</a>
+      </article>
+
+      <!-- Ash Radtke -->
+      <article class="card has-profile">
+        <div class="photo">
+          <img alt="Head shot of Ash Radtke" loading="lazy" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/3087/images/AR_Headshot.jpg" />
+        </div>
+        <div class="name">Ash Radtke</div>
+        <div class="title">Resource Sharing Technician</div>
+        <div class="rank">&nbsp;</div>
+        <div class="line"><strong>Phone:</strong> (717) 871-7108</div>
+        <div class="line"><strong>Office:</strong> LL114A</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:Ash.Radtke@millersville.edu">Ash.Radtke@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Position: Resource Sharing</span></div>
+        <a aria-label="View Ash Radtke profile" class="view-btn" href="https://library.millersville.edu/prf.php?id=d507a6d9-d44e-11f0-b702-0a92c88187d1">view more</a>
+      </article>
+
+      <!-- Ashley Sherman -->
+      <article class="card">
+        <div class="photo">
+          <img alt="Head shot of Ashley Sherman" loading="lazy" src="https://libapps.s3.amazonaws.com/customers/3087/images/AshleySherman.jpg" />
+        </div>
+        <div class="name">Ashley Sherman</div>
+        <div class="title">Archives Technician</div>
+        <div class="rank">&nbsp;</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7132</div>
+        <div class="line"><strong>Office:</strong> McNairy 802A</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:ashley.sherman@millersville.edu">ashley.sherman@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Position: Archives</span></div>
+        <a aria-label="View Ashley Sherman profile" class="view-btn" href="http://library.millersville.edu/c.php?g=1489966&amp;p=11120419&amp;preview=23778e48263afda57ca9778555197498">view more</a>
+      </article>
+
+      <!-- Andrew Welaish -->
+      <article class="card">
+        <div class="photo">
+          <img alt="Head shot of Andrew Welaish" loading="lazy" src="https://s3.amazonaws.com/libapps/customers/3087/images/andywelaish.jpg" />
+        </div>
+        <div class="name">Andrew Welaish</div>
+        <div class="title">Director of Library Operations</div>
+        <div class="rank">&nbsp;</div>
+        <div class="line"><strong>Phone:</strong> 717-871-7126</div>
+        <div class="line"><strong>Office:</strong> McNairy 208</div>
+        <div class="line"><strong>Email:</strong> <a href="mailto:andy.welaish@millersville.edu">andy.welaish@millersville.edu</a></div>
+        <div class="subjects"><strong>Subject area(s):</strong><span class="wrap">Position: Library Operations</span></div>
+        <a aria-label="View Andrew Welaish profile" class="view-btn" href="https://library.millersville.edu/c.php?g=1489970&amp;p=11120430&amp;preview=a9c0824bd3dfd11c934b688c14ba3f43">view more</a>
+      </article>
+
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
